@@ -1,0 +1,126 @@
+/*
+|--------------------------------------------------------------------------
+| Geral
+|--------------------------------------------------------------------------
+*/
+
+// background:url(#{$image-path}imagem.png);
+
+@charset 'utf-8';
+
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box; 
+            box-sizing: border-box; 
+            padding: 0;
+            margin:0;
+}
+
+html {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+}
+
+body{
+	background-color: $bg-color;
+	font-family: $main-font;
+	color: $text-color;
+  -webkit-tap-highlight-color: rgba(0,0,0,0); 
+}
+
+.container{
+  width: $main-width;
+  margin: 0 auto;
+  @extend %clearfix;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Tipografia
+|--------------------------------------------------------------------------
+*/
+
+p{
+  margin: 0 0 15px 0;
+}
+
+em{
+  font-family: $light-font;
+  font-style: italic;
+}
+
+hr{
+  border: solid #ddd;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 10px 0 30px;
+  height: 0;
+}
+
+ul{
+  list-style-type: none;
+}
+
+textarea{
+  padding-top:5px;
+}
+
+h1, h2, h3, h4, h5, h6, strong, b{
+  font-family: $bold-font;
+  font-weight: bold;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Links
+|--------------------------------------------------------------------------
+*/
+
+a{
+  color: $link-color;
+  text-decoration: none;
+  outline: 0;
+
+  &:hover   { color: lighten($link-color, 15%); }
+  &:visited { color: lighten($link-color, 5%); }
+  &:active  { color: lighten($link-color, 5%); }
+
+
+}
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Seleção
+|--------------------------------------------------------------------------
+*/
+
+::selection{
+  background: $selection-bg;
+  color:$selection-color; 
+}
+
+::-moz-selection{
+  background: $selection-bg;
+  color:$selection-color;
+}
+
+img::selection      { background: transparent; }
+img::-moz-selection { background: transparent; }
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,24 @@
+/*
+|--------------------------------------------------------------------------
+| SPRITES
+|--------------------------------------------------------------------------
+*/
+
+@import "compass/utilities/sprites";
+@import "common/*.png";
+
+.icon{
+	display: inline-block;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Header
+|--------------------------------------------------------------------------
+*/
+
+// .icon-user{
+//     @include common-sprite("icon-user");
+// 	width: common-sprite-width("icon-user");
+// 	height: common-sprite-height("icon-user");
+// }

@@ -1,0 +1,58 @@
+/*
+|--------------------------------------------------------------------------
+| Caminhos
+|--------------------------------------------------------------------------
+*/
+
+$image-path: '../images/';			// Caminho das imagens
+$font-path: '../fonts/';			// Caminho das fontes
+
+/*
+|--------------------------------------------------------------------------
+| Width Principal
+|--------------------------------------------------------------------------
+*/
+
+$main-width:  1170px;			   // Tamanho do Container
+
+/*
+|--------------------------------------------------------------------------
+| Cores
+|--------------------------------------------------------------------------
+*/
+
+$bg-color:			 #ffffff;     	// Cor Background
+
+$text-color:		 #ffffff;		// Cor Texto
+$title-color:		 #ffffff;		// Cor Títulos 
+$subtitle-color:	 #ffffff;		// Cor Subtitulos
+$link-color: 		 #ffffff;   	// Cor Links
+
+$theme-color-01:	 #ffffff;   	// Cor Tema 01 
+$theme-color-02:	 #ffffff; 		// Cor Tema 02 - 
+$theme-color-03:	 #ffffff; 		// Cor Tema 03 -  
+
+$btn-color: 		 #ffffff;  	    // Cor Botoes 01 -
+$btn-primary: 		 #ffffff;		// Cor Botão Primário - 	 
+$btn-info:			 #ffffff;       // Cor Botão Info -  
+
+$input-bg:			 #ffffff;		// Cor Input
+$input-border:		 #ffffff;		// Cor Borda Input
+$input-focus:		 #ffffff;		// Cor Borda Input Focus
+$input-color:		 #ffffff;		// Cor Borda Input
+
+$selection-bg: 	 	 #ffffff;   	// Cor Background Selection
+$selection-color: 	 #ffffff;   	// Cor Selection
+
+$modalbox-color: 	 #0C0F13;		// Modal Box 
+
+/*
+|--------------------------------------------------------------------------
+| Fontes
+|--------------------------------------------------------------------------
+*/
+    
+$main-font : 	'OpenSansRegular';		// Fonte Principal
+$regular-font:  'OpenSansRegular';		// Fonte Regular
+$bold-font: 	'OpenSansBold';		// Fonte com Bold
+$light-font: 	'OpenSansLight';		// Fonte com Italico

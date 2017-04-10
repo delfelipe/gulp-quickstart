@@ -1,0 +1,143 @@
+/*
+|--------------------------------------------------------------------------
+| Clearfix
+|--------------------------------------------------------------------------
+*/
+
+%clearfix{
+    &:after {
+    content:".";
+    display:block;
+    clear:both;
+    visibility:hidden;
+    height:0;
+    overflow:hidden;
+  }
+}
+
+/*
+|--------------------------------------------------------------------------
+| Vídeo Responsivo
+|--------------------------------------------------------------------------
+*/
+
+%video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+
+        iframe {
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        }
+
+}
+
+/*
+|--------------------------------------------------------------------------
+| Estados
+|--------------------------------------------------------------------------
+*/
+
+.is-visible  {opacity:1; }
+.is-hidden   {opacity: 0;}
+.is-removed  {display:none;}
+.is-active   {color:$link-color;}
+
+
+/*
+|--------------------------------------------------------------------------
+| PX para EM
+|--------------------------------------------------------------------------
+*/
+
+// Exemplo de Uso: font-size: em(72);
+
+$browser-context: 16; // Default
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em
+}
+
+/*
+|--------------------------------------------------------------------------
+| Animated
+|--------------------------------------------------------------------------
+*/
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+// FADEIN
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+// FADEINLEFT
+
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+    -ms-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+
+  
