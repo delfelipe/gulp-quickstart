@@ -1,0 +1,44 @@
+/*
+|--------------------------------------------------------------------------
+| Login
+|--------------------------------------------------------------------------
+*/
+
+.container{
+
+	div{
+		height:200px;
+		border:1px solid;
+	}
+
+}
+
+.logo{
+	@extend .grid-4;
+	@extend .offset-right-2;
+	background:silver; 
+
+ 
+		@media #{$media-tablet}{ 
+
+			width:100%;   
+
+		}
+
+		@media #{$media-mobile}{  
+
+			width:10%; 
+
+		}
+
+
+}
+
+
+.menu{
+	@extend .grid-4;
+	@extend .offset-left-2;
+	background:#f0f0f0;
+
+}
+

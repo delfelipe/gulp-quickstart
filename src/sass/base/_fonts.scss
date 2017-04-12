@@ -6,54 +6,13 @@
 
 @font-face {
     font-family: 'OpenSansRegular';
-    src: url('#{$font-path}open-sans/OpenSansRegular.eot');
-    src: url('#{$font-path}open-sans/OpenSansRegular.eot') format('embedded-opentype'),
-         url('#{$font-path}open-sans/OpenSansRegular.woff2') format('woff2'),
-         url('#{$font-path}open-sans/OpenSansRegular.woff') format('woff'),
-         url('#{$font-path}open-sans/OpenSansRegular.ttf') format('truetype'),
-         url('#{$font-path}open-sans/OpenSansRegular.svg#OpenSansRegular') format('svg');
+    src: url('#{$font-path}/open-sans/OpenSansRegular.eot');
+    src: url('#{$font-path}/open-sans/OpenSansRegular.eot') format('embedded-opentype'),
+         url('#{$font-path}/open-sans/OpenSansRegular.woff2') format('woff2'),
+         url('#{$font-path}/open-sans/OpenSansRegular.woff') format('woff'),
+         url('#{$font-path}/open-sans/OpenSansRegular.ttf') format('truetype'),
+         url('#{$font-path}/open-sans/OpenSansRegular.svg#OpenSansRegular') format('svg');
          font-weight: normal;
-    font-style: normal;
+         font-style: normal; 
 }
-
-
-/*
-|--------------------------------------------------------------------------
-| OpenSans Bold
-|--------------------------------------------------------------------------
-*/
-
-
-@font-face {
-    font-family: 'OpenSansBold';
-    src: url('#{$font-path}open-sans-bold/OpenSansBold.eot');
-    src: url('#{$font-path}open-sans-bold/OpenSansBold.eot') format('embedded-opentype'),
-         url('#{$font-path}open-sans-bold/OpenSansBold.woff2') format('woff2'),
-         url('#{$font-path}open-sans-bold/OpenSansBold.woff') format('woff'),
-         url('#{$font-path}open-sans-bold/OpenSansBold.ttf') format('truetype'),
-         url('#{$font-path}open-sans-bold/OpenSansBold.svg#OpenSansBold') format('svg');
-         font-weight: normal;
-    font-style: normal;
-}
-
-
-/*
-|--------------------------------------------------------------------------
-| OpenSans Light
-|--------------------------------------------------------------------------
-*/
-
-
-@font-face {
-    font-family: 'OpenSansLight';
-    src: url('#{$font-path}open-sans-light/OpenSansLight.eot');
-    src: url('#{$font-path}open-sans-light/OpenSansLight.eot') format('embedded-opentype'),
-         url('#{$font-path}open-sans-light/OpenSansLight.woff2') format('woff2'),
-         url('#{$font-path}open-sans-light/OpenSansLight.woff') format('woff'),
-         url('#{$font-path}open-sans-light/OpenSansLight.ttf') format('truetype'),
-         url('#{$font-path}open-sans-light/OpenSansLight.svg#OpenSansLight') format('svg');
-         font-weight: normal;
-    font-style: normal;
-}
-
 
