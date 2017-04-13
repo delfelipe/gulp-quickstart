@@ -24,7 +24,7 @@
            -moz-user-select: none;
             -ms-user-select: none;
             -ms-touch-action: manipulation;
-                touch-action: manipulation;
+                touch-action: manipulation; 
                
 }
 
@@ -34,19 +34,21 @@
 |--------------------------------------------------------------------------
 */
 
-$btn-colors:(
+$btn-cores:(
     theme:          $btn-color,
     theme-primary:  $btn-primary
 );
 
-@each $btn-theme, $btn-color in $btn-colors{
-    %btn-#{$btn-theme}{ 
-        background-color: $btn-color;
+@each $index, $valor in $btn-cores{
+    %btn-#{$index}{ 
+        background-color: $valor;
         color:#fff;
         transition: all ease 0.4s;
+        height: 43px;
+        font-family:$bold-font;  
 
         &:hover, a:focus {
-                background-color: darken($btn-color, 10%);
+                background-color: darken($valor, 10%); 
             }
     }
 }
@@ -57,21 +59,13 @@ $btn-colors:(
 |--------------------------------------------------------------------------
 */
 
+.btn-theme{
+    @extend %btn;
+    @extend %btn-theme;
+}
 
 .btn-primary{
     @extend %btn;
     @extend %btn-theme-primary;
-    border: 4px solid #1c7cb6;
-    height: 43px;
-    text-align: center;
-    text-transform: uppercase;
-    font-family:$bold-font; 
-    color:#1c7cb6;
-    transition: all ease 0.6s;
-
-        &:hover{
-            color:#fff;
-            background:#1c7cb6;
-        }
 }
 

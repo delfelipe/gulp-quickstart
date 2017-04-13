@@ -4,14 +4,38 @@
 |--------------------------------------------------------------------------
 */
 
-$grid-gutter: 1%;
-$grid-columns: 12;
-$grid-max: $main-width;
+	$grid-gutter: 1%;
+	$grid-columns: 12;
+	$grid-max: $main-width;
 
 
-@for $i from 1 through $grid-columns{ 
-  %grid-#{$i} {
-    width: 100% / $grid-columns * $i;
-    float:left;
-  }
-}
+	@for $i from 1 through $grid-columns{ 
+
+	  .grid-#{$i} {
+	    width: 100% / $grid-columns * $i;
+	    float:left;  
+	  }    
+	  
+	}
+
+/*
+|--------------------------------------------------------------------------
+| Offset
+|--------------------------------------------------------------------------
+*/
+
+	$space-columns: 24;
+
+	@for $j from 1 through $space-columns{
+	  .offset-left-#{$j} {
+	    margin-left: 100% / $grid-columns * $j;
+	  }
+	}
+
+	@for $l from 1 through $space-columns{
+	  .offset-right-#{$l} {
+	    margin-right: 100% / $grid-columns * $l;
+
+	  }
+	}
+

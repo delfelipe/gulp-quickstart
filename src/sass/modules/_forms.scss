@@ -4,19 +4,12 @@
 |--------------------------------------------------------------------------
 */
 
-.form-field{
-      width: 45%;
-      float: left;
-      margin-left: 30px;
-      position: relative;
-}
+.form-row { @extend %clearfix; margin-bottom: 15px; }
 
-.form-field-full   { @extend .form-field;  width: 100%; }
-.form-field-large  { @extend .form-field;  width: 82%; }
-.form-field-medium { @extend .form-field;  width: 37%; }
-.form-field-small  { @extend .form-field;  width: 24%; }
-
-.form-row{ @extend %clearfix; margin-bottom: 30px; }
+.form-field_full   { @extend .grid-12; }
+.form-field_large  { @extend .grid-8; }
+.form-field_medium { @extend .grid-6; }
+.form-field_small  { @extend .grid-4; }
 
 /*
 |--------------------------------------------------------------------------
@@ -26,32 +19,21 @@
 
 textarea,
 select,
-input[type="text"],
-input[type="email"],
-input[type="date"],
-input[type="password"]
-input[type="checkbox"]{
+input{ 
     width:100%;
     height:44px;
     padding-left: 10px;
     background-color: $input-bg;
     border: 1px solid $input-border;
-    -webkit-transition: border linear .2s, box-shadow linear .2s;
-       -moz-transition: border linear .2s, box-shadow linear .2s;
-         -o-transition: border linear .2s, box-shadow linear .2s;
-            transition: border linear .2s, box-shadow linear .2s;
-
-
-            &:focus{
-                border-color: $input-border;
-                outline: 0;
-                outline: thin dotted \9;
-                -webkit-box-shadow: 0 0 2px $input-focus;
-                   -moz-box-shadow: 0 0 2px $input-focus;
-                        box-shadow: 0 0 2px $input-focus;
-            }
+    transition: border linear .2s, box-shadow linear .2s;
+  
+      &:focus{
+          border-color: $input-border;
+          outline: 0;
+          outline: thin dotted \9;
+          box-shadow: 0 0 2px $input-focus;
+      }
 }
-
 
 /*
 |--------------------------------------------------------------------------
@@ -59,8 +41,7 @@ input[type="checkbox"]{
 |--------------------------------------------------------------------------
 */
 
-
-  label{
+label{
     display:inline-block;
     margin-bottom: 5px;
 
@@ -71,10 +52,10 @@ input[type="checkbox"]{
     }
 }
 
-.feedback-message{
+.label-tip{
     display:inline-block;
     margin-bottom: 5px;
-}
+} 
 
 
 /*

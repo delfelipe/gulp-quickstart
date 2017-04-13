@@ -1,24 +1,32 @@
 /*
 |--------------------------------------------------------------------------
-| SPRITES
+| Sprites Config
 |--------------------------------------------------------------------------
 */
 
-@import "compass/utilities/sprites";
-@import "common/*.png";
+$sprite-spacing: 2px;
 
-.icon{
-	display: inline-block;
-}
+@import "compass/utilities/sprites";
+@import "common/*.png";  
 
 /*
 |--------------------------------------------------------------------------
-| Header
+| Sprites
 |--------------------------------------------------------------------------
 */
 
-// .icon-user{
-//     @include common-sprite("icon-user");
-// 	width: common-sprite-width("icon-user");
-// 	height: common-sprite-height("icon-user");
+// $sprites:(
+//     icon_01:          facebook,
+//     icon_02:          twitter, 
+// ); 
+
+// @each $index, $valor in $sprites{
+//     .icon-#{$valor}{
+// 		display: inline-block;
+// 	    @include common-sprite(#{$valor}); 
+// 		width: common-sprite-width(#{$valor}); 
+// 		height: common-sprite-height(#{$valor});
+// 	}
 // }
+
+ 

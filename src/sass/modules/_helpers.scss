@@ -1,5 +1,17 @@
 /*
 |--------------------------------------------------------------------------
+| Estados
+|--------------------------------------------------------------------------
+*/
+
+.is-visible  {opacity:1; }
+.is-hidden   {opacity: 0;}
+.is-removed  {display:none;}
+.is-active   {color:$link-color;}
+
+
+/*
+|--------------------------------------------------------------------------
 | Clearfix
 |--------------------------------------------------------------------------
 */
@@ -17,6 +29,50 @@
 
 /*
 |--------------------------------------------------------------------------
+| Image Replacement
+|--------------------------------------------------------------------------
+*/
+
+%image-replacement{
+  text-indent: -9999px;
+  overflow: hidden;
+  background-repeat: no-repeat; 
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Margin Auto
+|--------------------------------------------------------------------------
+*/
+
+%margin-auto{
+     margin-left: auto;
+     margin-right: auto;
+}
+
+%margin-absolute-auto{
+     margin-left: auto;
+     margin-right: auto;
+     left:0;
+     right:0;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Pseudo Elements
+|--------------------------------------------------------------------------
+*/
+
+%pseudo{
+    content:"";
+    display: block;
+    position: absolute;
+}
+
+
+/*
+|--------------------------------------------------------------------------
 | Vídeo Responsivo
 |--------------------------------------------------------------------------
 */
@@ -24,7 +80,7 @@
 %video-wrapper {
     position: relative;
     padding-bottom: 56.25%;
-    padding-top: 25px;
+    padding-top: 25px; 
     height: 0;
 
         iframe {
@@ -39,14 +95,16 @@
 
 /*
 |--------------------------------------------------------------------------
-| Estados
+| Cortar Elemento
 |--------------------------------------------------------------------------
 */
 
-.is-visible  {opacity:1; }
-.is-hidden   {opacity: 0;}
-.is-removed  {display:none;}
-.is-active   {color:$link-color;}
+@mixin truncate($truncation-width) {
+    max-width: $truncation-width;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+} 
 
 
 /*
@@ -63,81 +121,3 @@ $browser-context: 16; // Default
   @return #{$pixels/$context}em
 }
 
-/*
-|--------------------------------------------------------------------------
-| Animated
-|--------------------------------------------------------------------------
-*/
-
-.animated {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-// FADEIN
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-.fadeIn {
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
-}
-
-// FADEINLEFT
-
-@-webkit-keyframes fadeInLeft {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-20px);
-    transform: translateX(-20px);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadeInLeft {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-20px);
-    -ms-transform: translateX(-20px);
-    transform: translateX(-20px);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-    -ms-transform: translateX(0);
-    transform: translateX(0);
-  }
-}
-
-.fadeInLeft {
-  -webkit-animation-name: fadeInLeft;
-  animation-name: fadeInLeft;
-}
-
-  
